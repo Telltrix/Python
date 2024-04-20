@@ -32,11 +32,11 @@
 # 5) Uma feira de livros está fazendo promoção onde na compra de 3 livros, o(a) comprador(a) ganha 15% de desconto. Criar um programa que receba os valores dos 3 livros
 # e mostra na tela o total dos livros sem desconto e com desconto.
 
-# book1 = int(input('Digite o valor do primeiro livro: '))
-# book2 = int(input('Digite o valor do secundo livro: '))
-# book3 = int(input('Digite o valor do terceiro livro: '))
+# book1 = float(input('Digite o valor do primeiro livro: '))
+# book2 = float(input('Digite o valor do secundo livro: '))
+# book3 = float(input('Digite o valor do terceiro livro: '))
 # total = book1+book2+book3
-# print(f'Valor total sem desconto é: R${total}\n Valor total com desconto: R${(total-(total*0.15))}')
+# print(f'Valor total sem desconto é: R${total}\n Valor total com desconto: R${(total-(total*0.15)):.2f}')
 
 # 6) Uma cidade pretende apurar os votos de sua eleição. Faça um programa para ler o número total de eleitores. Em seguida o número de votos do candidato X, 
 # o número de votos do candidato Y, total de votos brancos e total de votos nulos (a soma desses quatro, deve ser igual ao total de eleitores). 
@@ -69,7 +69,7 @@
 # people = int(input('Digite quantidade de pessoas: '))
 # diary = int(input('Digite a quantidade de diarias: '))
 # cooffe = int(input('Digite quantodade de pessoas que vão querer o café diário: '))
-# print(f'Total a pagar: R${(280*diary)+(cooffe*15)}')
+# print(f'Total a pagar: R${(280*diary)+(cooffe*15):.2f}')
 
 # 9) Criar um programa que realize o cálculo de uma média da faculdade. A média é composta por três notas: Atividade Individual (peso 1), Seminário em Equipe (peso 1), Projeto final (peso 3).
 # O usuário deve digitar as três notas e a média deve ser mostrada na tela.
@@ -78,7 +78,7 @@
 # semi = float(input('Digite a nota do seminário em equipe: '))
 # final = float(input('Digite a nota do projeto final: '))
 # final = final*3
-# print(f'A média do aluno é; {(ind+semi+final)/5}')
+# print(f'A média do aluno é; {(ind+semi+final)/5:.2f}')
 
 # 10) Criar um programa que calcule o IMC, no qual o usuário deve digitar o seu peso e altura, realizar o cálculo (peso / altura * altura) e mostrar o resultado na tela, 
 # com 3 casas depois da vírgula.
