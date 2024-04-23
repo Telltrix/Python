@@ -52,12 +52,12 @@
 # media= (age1+age2+age3)/3
 
 # if age1 >= age2 and age1 >= age3:
-#     major= f'{name1} é mais velho, com {age1} anos'
+#     oldest= f'{name1} é mais velho, com {age1} anos'
 # elif age2 >= age3:
-#     major= f'{name2} é mais velho, com {age2} anos'
+#     oldest= f'{name2} é mais velho, com {age2} anos'
 # else:
-#     major= f'{name3} é mais velho, com {age3} anos'
-# print(f'Média de idade é: {media:.2f}\n{major}')
+#     oldest= f'{name3} é mais velho, com {age3} anos'
+# print(f'Média de idade é: {media:.2f}\n{oldest}')
 
 # 4) Em um determinado e-commerce, o frete para produtos possui o valor fixo de
 # R$12,50. A loja possui benefícios para assinantes em três categorias: 
@@ -68,21 +68,24 @@
 # Faça um programa que solicite o valor da compra e a categoria de assinante (1, 2, 3 ou 4). 
 # Mostrar na tela o valor da compra de acordo com a opção escolhida.
 
-# frete= 12.5
-# valorCompra= float(input('Digite o valor da compra: '))
-# categoriaAssinante = input('Qual a categoria do assinante?\n1)Premium\n2)Gold\n3)Silver\n4)Não assinante: ')
+# freight= 12.5
+# valuePurchase= float(input('Digite o valor da compra: '))
+# category = input('Qual a categoria do assinante?\n1)Premium\n2)Gold\n3)Silver\n4)Não assinante: ')
 
-# match categoriaAssinante:
+# match category:
 #     case '1':
-#         frete = 0
-#         desconto = 0.8
+#         freight = 0
+#         discount = 0.8
+#         print(f'Valor total: R${freight+(valuePurchase*discount):.2f}')
 #     case '2':
-#         desconto = 0.8
+#         discount = 0.8
+#         print(f'Valor total: R${freight+(valuePurchase*discount):.2f}')
 #     case '3':
-#         desconto = 0.9
+#         discount = 0.9
+#         print(f'Valor total: R${freight+(valuePurchase*discount):.2f}')
 #     case '4':
-#         desconto = 1
+#         discount = 1
+#         print(f'Valor total: R${freight+(valuePurchase*discount):.2f}')
 #     case _:
-#         desconto = 0
+#         discount = 0
 #         print('Opção inválida.')
-# print(f'Valor total: R${(frete+valorCompra)*desconto:.2f}')
