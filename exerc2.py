@@ -244,7 +244,21 @@
 # 15 pontos (deus da peteca), de 14 a 10 (petequeiro profissa), de 9 a 5 (petequeiro
 # de final de semana), de 4 a 1 (pseudo-petequeiro) e 0 pontos (nunca petequeiro).
 
-arremesso1= int(input('Digite a pontuação do primeiro arremesso: '))
-arremesso2= int(input('Digite a pontuação do segundo arremesso: '))
-arremesso3= int(input('Digite a pontuação do terceiro arremesso: '))
-totalpontos= arremesso1+arremesso2+arremesso3
+# arremesso= int(input('Digite a quantidade de arremesso do participante: '))
+# total=0
+# x= int(0)
+# while x < arremesso:
+#   x += 1
+#   pontuacao= int(input(f'Digite a pontuação do {x}º arremesso: '))
+#   total=total+pontuacao
+#   print(f'Total parcial: {total}')
+# if total >= 15:
+#   print(f'{total} pontos: Deus da peteca!')
+# elif total < 15 and total >= 10:
+#   print(f'{total} pontos: Petequeiro profissional!')
+# elif total < 10 and total >= 5:
+#   print(f'{total} pontos: Petequeiro de final de semana!')
+# elif total < 5 and total >= 1:
+#   print(f'{total} pontos: Petequeiro de final de semana!')
+# else:
+#   print(f'{total} pontos: Nunca Petequeiro!')
