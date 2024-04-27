@@ -219,27 +219,27 @@
 # Faça um programa que solicite o valor da compra e a categoria de assinante (1, 2, 3 ou 4). 
 # Mostrar na tela o valor da compra de acordo com a opção escolhida.
 
-frete= 12.5
-valorCompra= float(input('Digite o valor da compra: '))
-categoriaAssinante = input('Qual a categoria do assinante?\nDigite 1 para clientes Premium\nDigite 2 para clientes Gold\nDigite 3 para clientes Silver\nDigite 4 para clientes Não assinante\n ')
+# frete= 12.5
+# valorCompra= float(input('Digite o valor da compra: '))
+# categoriaAssinante = input('Qual a categoria do assinante?\nDigite 1 para clientes Premium\nDigite 2 para clientes Gold\nDigite 3 para clientes Silver\nDigite 4 para clientes Não assinante\n ')
 
-match categoriaAssinante:
-    case '1':
-        frete = 0
-        desconto = 0.8
-        print(f'Valor total: R${frete+(valorCompra*desconto):.2f}')
-    case '2':
-        desconto = 0.8
-        print(f'Valor total: R${frete+(valorCompra*desconto):.2f}')
-    case '3':
-        desconto = 0.9
-        print(f'Valor total: R${frete+(valorCompra*desconto):.2f}')
-    case '4':
-        desconto = 1
-        print(f'Valor total: R${frete+(valorCompra*desconto):.2f}')
-    case _:
-        desconto= 0
-        print('Opção inválida.')
+# match categoriaAssinante:
+#     case '1':
+#         frete = 0
+#         desconto = 0.8
+#         print(f'Valor total: R${frete+(valorCompra*desconto):.2f}')
+#     case '2':
+#         desconto = 0.8
+#         print(f'Valor total: R${frete+(valorCompra*desconto):.2f}')
+#     case '3':
+#         desconto = 0.9
+#         print(f'Valor total: R${frete+(valorCompra*desconto):.2f}')
+#     case '4':
+#         desconto = 1
+#         print(f'Valor total: R${frete+(valorCompra*desconto):.2f}')
+#     case _:
+#         desconto= 0
+#         print('Opção inválida.')
 
 # 14) Numa competição de arremesso de peteca, o competidor tem direito a 3
 # arremessos para que a peteca caia em um alvo com áreas e pontuações de 0 a 5,
