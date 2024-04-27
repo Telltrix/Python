@@ -56,12 +56,40 @@
 #             return dividir(number1, number2)
 #         case _:
 #             return 'Opção inválida!'
-
 # print(f'Resultado: {calculator(float(input('Digite o primeiro numero: ')), float(input('Digite o segundo numero: ')))}')
 
-def calcularPrecoTerreno(largura, comprimento):
-    precoMetro= float(1000)
-    return (largura*comprimento)*precoMetro
-print(f'Estimativa do valor do terreno de 50x20 é: R${calcularPrecoTerreno(50, 20):,.2f}')
-print(f'Estimativa do valor do terreno de 100x400 é: R${calcularPrecoTerreno(100, 400):,.2f}')
-print(f'Estimativa do valor do terreno de 20x1000 é: R${calcularPrecoTerreno(20, 1000):,.2f}')
+# def calcularPrecoTerreno(largura, comprimento):
+#     precoMetro= float(1000)
+#     return (largura*comprimento)*precoMetro
+# print(f'Estimativa do valor do terreno de 50x20 é: R${calcularPrecoTerreno(50, 20):,.2f}')
+# print(f'Estimativa do valor do terreno de 100x400 é: R${calcularPrecoTerreno(100, 400):,.2f}')
+# print(f'Estimativa do valor do terreno de 20x1000 é: R${calcularPrecoTerreno(20, 1000):,.2f}')
+
+# count= 0
+# while count < 10:
+#     count += 1
+#     print(f'Contador vale: {count}')
+
+# count= 0
+# while count < 10:
+#     count += 1
+#     if (count % 3) == 0:
+#         continue
+#     print(count)
+
+# soma= 0
+# while soma <= 100:
+#     numero= int(input('Digite um numero: '))
+#     soma += numero
+#     print(f'Valor atual da soma: {soma}')
+# print(f'Valor da soma final: {soma}')
+
+# for count in range(5):
+#     print(count)
+#     nome= input('Digite nome: ')
+#     if count == 3:
+#         break
+#     print(nome)
+#o range começa em i, ate x somando y(i, x, y)
+for count in range(2, 10, 3):
+    print(count)
