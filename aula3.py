@@ -90,6 +90,18 @@
 #     if count == 3:
 #         break
 #     print(nome)
+
 #o range começa em i, ate x somando y(i, x, y)
-for count in range(2, 10, 3):
-    print(count)
+# for count in range(2, 10, 3):
+#     print(count)
+
+# soma= 0
+# quantidade= int(input('Digite quantidade de notas a ser informada: '))
+# for count in range(quantidade):
+#     soma= int(input(f'Digite {count+1}º nota: '))+soma
+# print(f'Média das notas é: {soma/quantidade:.2f}')
+
+# nomes=[]
+# for count in range(3):
+#     nomes.append(input('Digite nome: '))
+#     print(f'Nome: {nomes[count]} esta na posição: {count} da lista')
