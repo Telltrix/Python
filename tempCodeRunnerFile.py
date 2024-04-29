@@ -1,12 +1,17 @@
-aux=1
-for count in range(5):
-    numero= int(input(f'Digite o {count+1}º numero: '))
-    while aux <= numero:
-        check= numero%aux
+numero= int(input(f'Digite um numero acima de 1 para verificar se ele é primo: '))
+if numero < 2:
+    print('Numero digitado menor que 2!')
+for count in range (1, numero+1):
+    aux=2
+    primo= True
+    check= 0
+    while aux < count:
+        if count <= 1:
+            primo= False
+        else:    
+            check= count%aux
         if check == 0:
-            primo= f'{numero} é primo!'
-            aux+= 1
-        else:
-            primo= f'{numero} não é primo!'
-            break
-    print(primo)
+            primo= False
+        aux+= 1
+    if primo and count > 1:
+        print(f'{count} é primo')

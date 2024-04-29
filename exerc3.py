@@ -95,15 +95,41 @@ print(f'O pais A levou {ano} anos para ultrapassar o pais B em população.')
 # Um número primo é aquele que é divisível apenas por um e por ele mesmo.
 # Faça um programa que peça ao usuário para digitar cinco números inteiros e mostre na tela se são
 # primos ou não.
-aux=1
-for count in range(5):
-    numero= int(input(f'Digite o {count+1}º numero: '))
-    while aux <= numero:
+for count in range (5):
+    aux=2
+    primo= 'É primo!'
+    numero= int(input(f'Digite {count+1}º numero acima de 1 para verificar se ele é primo: '))
+    if numero <= 1:
+        print(f'{numero} não é primo')
+        break
+    while aux < numero:
         check= numero%aux
         if check == 0:
-            primo= f'{numero} é primo!'
-            aux+= 1
-        else:
-            primo= f'{numero} não é primo!'
-            break
-    print(primo)
+            primo= 'Não é primo!'
+        aux+= 1
+    print(f'{numero} {primo}')
+
+# 9) Faça um programa que gera uma lista dos números primos existentes entre 1 e um número inteiro
+# digitado pelo usuário.
+numero= int(input(f'Digite um numero acima de 1 para verificar se ele é primo: '))
+if numero < 2:
+    print('Numero digitado menor que 2!')
+for count in range (1, numero+1):
+    aux=2
+    primo= True
+    check= 0
+    while aux < count:
+        if count <= 1:
+            primo= False
+        else:    
+            check= count%aux
+        if check == 0:
+            primo= False
+        aux+= 1
+    if primo and count > 1:
+        print(f'{count} é primo')
+
+# 10) Você é um colecionador de vinis e resolveu ir ao sebo para comprar alguns vinis raros. Porém, você
+# tem apenas R$200 para gastar. Faça um programa que pergunte o nome do vinil e o
+# valor, repetidamente. Caso o valor ultrapasse R$200, encerrar (desconsiderando o último vinil). Mostrar na tela:
+# saldo=200
