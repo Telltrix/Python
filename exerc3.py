@@ -132,4 +132,9 @@ for count in range (1, numero+1):
 # 10) Você é um colecionador de vinis e resolveu ir ao sebo para comprar alguns vinis raros. Porém, você
 # tem apenas R$200 para gastar. Faça um programa que pergunte o nome do vinil e o
 # valor, repetidamente. Caso o valor ultrapasse R$200, encerrar (desconsiderando o último vinil). Mostrar na tela:
+# Total gasto em reais
+# Valor que sobrou
+# Quantos foram comprados
+# A média de preço
+# O mais caro e o mais barato
 # saldo=200
