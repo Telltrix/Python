@@ -121,35 +121,48 @@ else:
     print(f'Produtos abaixo de 50: {lowPrice}')
     print(f'Produtos com preço entre 50 e 100: {aux}')
     print(f'Média dos valores acima de 100: {mediaFInal}')
-#-------------->
-def listarSabores():
-    sabores= ['Morango', 'Manga', 'Uva']
-    opcao= input(f'Digite o valor correspondente ao sabor:\n1- {sabores(0)}\n2- {sabores(1)}\n3- {sabores(2)}\n')
-    match opcao:
-        case '1':
-            return sabores(0)
-        case '2':
-            return sabores(1)
-        case '3':
-            return sabores(2)
-        case _:
-            print('Valor incorreto.')
-def listarSorvete(sorvete):
-    for count in sorvete:
-        if len(sorvete) == 0:
-            print('Seu sorvete não possui sabores!')
-            break
-        else:
-            print(f'{count+1}º camada, sabor: {sorvete(count)}')
 
 # 7) Uma sorveteria possui um sistema de self-service de sorvetes no qual o cliente pode montar seu sorvete
 # com até 4 bolas (sabores). Criar um programa que simule esse sistema. A montagem do sorvete segue o
 # modelo de estrutura PILHA, onde os sabores são "empilhados" um após o outro e quando algum tiver
 # que ser removido, será sempre o último da pilha.
+# 1- Adicionar sabor
+# 2- Remover sabor
+# 3- Visualizar sorvete
+# 4- Finalizar pedido
+# MENSAGENS e VALIDAÇÕES
+# Opção 1-> “Sabor adicionado!” OU “Limite de sabores atingido, remova um sabor!”
+# Opção 2-> “Sabor removido!” OU “Não existem sabores adicionados!”
+# Opção 3-> “Camada 1 - Sabor X, Camada 2 - Sabor Y, etc.” OU “Seu sorvete não possui sabores!”
+# Opção 4-> “Pedido realizado!” OU “Adicione pelo menos um sabor!”
+# - Criar mensagem de boas vindas e menu funcional.
+# - Criar uma lista para a pilha dos sabores.
+# - Programar a opção de "Adicionar sabor" corretamente.
+# - Programar a opção de "Remover sabor" corretamente.
+# - Programar a opção de "Visualizar sorvete" corretamente.
+# - Fazer as validações secundárias (lógica).
+# - Mostrar mensagens para o usuário (prints).
+def listarSabores():
+    sabores= ['Morango', 'Manga', 'Uva']
+    opcao= input(f'Digite o valor correspondente ao sabor:\n1- {sabores[0]}\n2- {sabores[1]}\n3- {sabores[2]}\n')
+    match opcao:
+        case '1':
+            return sabores[0]
+        case '2':
+            return sabores[1]
+        case '3':
+            return sabores[2]
+        case _:
+            print('Valor incorreto.')
+def listarSorvete(sorvete):
+    if len(sorvete) == 0:
+        print('Seu sorvete não possui sabores!')
+    for count in range(len(sorvete)):
+        print(f'{count+1}º camada, sabor: {sorvete[count]}')
 sorvete=[]
 quebra = True
-menu= input(f'Menu da sorveteria digite o valor correspondente a opção:\n1- Adicionar sabor\n2- Remover sabor\n3- Vizualizar sorvete\n4- Finalizar o pedido\n')
 while quebra:
+    menu= input(f'Menu da sorveteria digite o valor correspondente a opção:\n1- Adicionar sabor\n2- Remover sabor\n3- Vizualizar sorvete\n4- Finalizar o pedido\n')
     match menu:
         case '1':
             if len(sorvete) == 4:
@@ -171,20 +184,5 @@ while quebra:
             else:
                 print('Pedido realizado!')
                 quebra = False
-
-# 1- Adicionar sabor
-# 2- Remover sabor
-# 3- Visualizar sorvete
-# 4- Finalizar pedido
-# MENSAGENS e VALIDAÇÕES
-# Opção 1-> “Sabor adicionado!” OU “Limite de sabores atingido, remova um sabor!”
-# Opção 2-> “Sabor removido!” OU “Não existem sabores adicionados!”
-# Opção 3-> “Camada 1 - Sabor X, Camada 2 - Sabor Y, etc.” OU “Seu sorvete não possui sabores!”
-# Opção 4-> “Pedido realizado!” OU “Adicione pelo menos um sabor!”
-# - Criar mensagem de boas vindas e menu funcional.
-# - Criar uma lista para a pilha dos sabores.
-# - Programar a opção de "Adicionar sabor" corretamente.
-# - Programar a opção de "Remover sabor" corretamente.
-# - Programar a opção de "Visualizar sorvete" corretamente.
-# - Fazer as validações secundárias (lógica).
-# - Mostrar mensagens para o usuário (prints).
+        case _:
+            print('Valor incorreto')
