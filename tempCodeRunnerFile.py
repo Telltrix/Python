@@ -1,29 +1,20 @@
-class ContaBancaria:
-    def __init__(self, numeroConta, senha):
-        self.numero= numeroConta
-        self._saldo= 0
-        self._senha= senha
-
+class Automovel:
+    def __init__(self, marca: str, modelo: str, ano: int, cor: str):
+        self.marca= marca
+        self.modelo= modelo
+        self.ano= ano
+        self.cor= cor
+    
     def __str__(self):
-        return f'Conta numero: {self.numero}\nSaldo: {self._saldo}'
+        return f'Automóvel da marca: {self.marca}, modelo: {self.modelo}, ano: {self.ano}'
     
-    def depositar(self, valor):
-        self._saldo= self._saldo+valor
-        return self.get_saldo()
+class Carro(Automovel):
+    def __init__(self, marca: str, modelo: str, ano: int, cor: str, num_portas: int):
+        super().__init__(marca, modelo, ano, cor)
+        self.num_portas= num_portas
     
-    def sacar(self, valor):
-        self= self._saldo-valor
-        return self.get_saldo()
-
-    def get_saldo(self):
-        return self._saldo
+    def __str__(self):
+        return f'Carro da marca: {self.marca}, modelo: {self.modelo}, ano: {self.ano}, {self.num_portas} portas.'
     
-    def set_saldo(self, valor):
-        self._saldo= valor
-        return self.get_saldo()
-    
-objeto_contaBancaria_1 = ContaBancaria(123, 321)
-print(objeto_contaBancaria_1.depositar(500))
-print(objeto_contaBancaria_1.sacar(200))
-print(objeto_contaBancaria_1.get_saldo())
-print(objeto_contaBancaria_1.set_saldo(5000))
+carro_1= Carro('Ford', 'Fiesta', 2020, 'preto', 4)
+print(carro_1.__str__)
